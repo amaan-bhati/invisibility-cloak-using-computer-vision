@@ -18,11 +18,9 @@ cv2.createTrackbar("lower_value","bars",54, 255, hello)
 while(True):
 	cv2.waitKey(1000)
 	ret,init_frame = cap.read()
-	#check if the frame is returned then brake
 	if(ret):
 		break
 
-# Start capturing the frames for actual magic!!
 while(True):
 	ret,frame = cap.read()
 	inspect = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
